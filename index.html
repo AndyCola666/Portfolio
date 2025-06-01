@@ -32,6 +32,8 @@
 
 
   <main>
+<div class="carousel-container">
+  <div class="carousel-inner">
     <section id="inicio" class="content-section active">
   <div class="novedades-banner">
     <div class="novedades-img">
@@ -63,7 +65,7 @@
       <section id="bio" class="content-section">
         <div class="bio-container">
           <div class="bio-image">
-            <img src="../media/Fotos/Talentos.jpg" alt="Mi foto" />
+            <img src="./media/Fotos/Talentos.jpg" alt="Mi foto" />
           </div>
           <div class="bio-text">
             <h1>¡QUE TRANZA!</h1>
@@ -147,432 +149,297 @@
         </div>
       </section>
 
-      <!-- Detalle de Proyecto 1 -->
-      <section id="detalle-proyecto1" class="detalle-proyecto" style="display:none;">
-        <div class="detalle-layout">
-          <!-- Galería lateral -->
-          <div class="detalle-galeria">
-            <img src="media/Fotos/bono1.JPG" class="miniatura" alt="img1">
-            <img src="media/Fotos/bono2.JPG" class="miniatura" alt="img2">
-            <img src="media/Fotos/bono3.JPG" class="miniatura" alt="img3">
-            <img src="media/Fotos/bono4.JPG" class="miniatura" alt="img4">
-            <img src="media/Fotos/bono5.JPG" class="miniatura" alt="img5">
-            <!-- Más miniaturas -->
-          </div>
-          <!-- Detalle principal -->
-          <div class="detalle-main">
-            <img src="media/Fotos/groovesanddogscover.png" class="detalle-img-grande" alt="principal">
-            <div class="detalle-descripcion">
-              <h2>Nombre del Proyecto 1</h2>
-              <p>"Grooves and Dogs" es un EP que nació como la idea de retarme a mi mismo para componer, tocar y producir
-                enteramente un proyecto basado en el jazz y big band. Con referencias de obras como "Cowboy Beebop" de Cain Kuga,
-                "Marvel vs. Capcom 2" y viendo de cerca a leyendas del género como Jhon Coltrane y Jo Jones, este EP resultó ser toda une 
-                experiencia totalmente nueva para mi, plasmada por medio de una amalgama de sonidos y ritmos bailables, melodías intrigantes y 
-                una sensación de sentirse perseguido por agentes del departamento de policía de la ciudad de Chicago en los años 50.
-                La producción fue realizada enteramente por mi, desde la composición, arreglos, grabación y mezcla.
-                E de destacar la portada del proyecto, donde quise poner a mi leal mascota "Bono" al lado del bajo, uno de los instrumentos 
-                que más hacen acto de presencia con su color y textura en el EP. 
-                Este material ya se encuentra disponible tanto en Bandcamp como en YouTube.
-              </p>
+      <section id="musica" class="content-section">
+        <div class="music-tabs">
+          <button id="btn-muestra" class="music-tab active">Música muestra</button>
+          <button id="btn-publicada" class="music-tab">Música publicada</button>
+        </div>
+        <div id="musica-muestra" class="music-subsection active">
+          <div class="music-container">
+            <h2>Música muestra</h2>
+            <div class="track-card">
+              <div class="track-image">
+                <img src="media/Fotos/Kokoro.png" alt="Carátula álbum 1" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Caja Musical2q.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Musical Box<br />
+                  <strong>Producción:</strong> Animación "Kokoro"<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
             </div>
+        
+            <div class="track-card">
+              <div class="track-image">
+                <img src="media/Fotos/FightingFantasy.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Fighting_FantasyTheme2.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Fighting Fantasy Main Theme<br />
+                  <strong>Producción:</strong> "Fighting Fantasy" Game<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="media/Fotos/animas.png" alt="Carátula álbum 3" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Pianoanimas.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Piano Melody<br />
+                  <strong>Producción:</strong> "Las Ánimas" Game<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="media/Fotos/animas.png" alt="Carátula álbum 3" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Overworld.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Overworld<br />
+                  <strong>Producción:</strong> "Las Ánimas" Game<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="media/Fotos/animas.png" alt="Carátula álbum 3" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Enemigo1.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Enemigo #1<br />
+                  <strong>Producción:</strong> "Las Ánimas" Game<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/uaatv.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Track4.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Ambiente<br />
+                  <strong>Producción:</strong> Noticiero UAA TV<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="media/Fotos/uaatv.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Track7.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Track #7<br />
+                  <strong>Producción:</strong> Noticiero UAA TV<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/switchero.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Tema _Amarillo_.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Amarillo<br />
+                  <strong>Producción:</strong>"Switch hero" Game<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/switchero.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Tema _Rojo_.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Rojo<br />
+                  <strong>Producción:</strong>"Switch hero" Game<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+        
+            <!-- Puedes duplicar más track-card aquí -->
           </div>
         </div>
-        <button class="cerrar-detalle">Cerrar</button>
+        <div id="musica-publicada" class="music-subsection">
+          <div class="music-container">
+            <h2>Música publicada</h2>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/groovesanddogscover.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Bass underwater.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Bass underwater<br />
+                  <strong>Producción:</strong> Grooves And Dogs<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/groovesanddogscover.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Bono Chase.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Bono Chase<br />
+                  <strong>Producción:</strong> Grooves And Dogs<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/groovesanddogscover.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Spectating .mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Spectating<br />
+                  <strong>Producción:</strong> Grooves And Dogs<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/Apassagedoorcover.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/A_door_beyond_the_pillar.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> A Door Beyond The Pillar<br />
+                  <strong>Producción:</strong> A Passage Door<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/Apassagedoorcover.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Cravings to the end.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Cravings To The End<br />
+                  <strong>Producción:</strong> A Passage Door<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+            </div>
+
+          <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/Apassagedoorcover.png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/Forest percussions.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Forest Percussions<br />
+                  <strong>Producción:</strong> A Passage Door<br />
+                  <strong>Autor:</strong> Corner Creations
+                </div>
+              </div>
+          </div>
+
+          <div class="track-card">
+              <div class="track-image">
+                <img src="../Portfolio/media/Fotos/Mis dos almas(1).png" alt="Carátula álbum 2" class="caratula-modal">
+              </div>
+              <div class="track-details">
+                <audio controls>
+                  <source src="media/Audios/TuColor.mp3" type="audio/mpeg">
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="track-info">
+                  <strong>Nombre:</strong> Tu Color<br />
+                  <strong>Producción:</strong> Mis Dos Almas<br />
+                  <strong>Autor:</strong> Andy
+                </div>
+              </div>
+          </div>
+
+            
+          </div>
+        </div>
       </section>
-
-      <!-- Detalle de Proyecto 2 -->
-      <section id="detalle-proyecto2" class="detalle-proyecto" style="display:none;">
-        <div class="detalle-layout">
-          <div class="detalle-galeria">
-            <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
-            <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
-            <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
-            <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
-          </div>
-          <div class="detalle-main">
-            <img src="media/Fotos/Apassagedoorcover.png" class="detalle-img-grande" alt="principal">
-            <div class="detalle-descripcion">
-              <h2>EP "A Passage Door"</h2>
-              <p>"A Passage Door" se trata de la primer producción que hice de principio a fin con el objetivo de  
-                plasmar mis primeras ideas para una supuesta banda sonora de un videojuego.
-                Las melodías de este material son fuertemente inspiradas en las aventuras que uno vive con el mando en
-                la mano, donde encarnamos a un personaje que se se enfrenta a descubrimientos donde ni nosotros sabíamos
-                que queriamos descubrir. Los temas son inspirados por bandas sonoras de títulos como "The Legend of Zelda: Twilight Princess", 
-              iCO y Castlevania. El EP lo hice estando muy inspirado por géneros como el Dungeon Synth, Sand Synth y Ambient en general.
-            Como nota curiosa, este material lo compuse inspirándome en las travesías que hacía con mis amigos hacia El Cerro del Muerto, 
-          una montaña (O mejor dicho, cerro) que se encuentra en mi ciudad natal Aguascalientes, el cual tiene forma de un muerto acostado, de ahí su
-        famoso nombre.</p>
-            </div>
-          </div>
-        </div>
-        <button class="cerrar-detalle">Cerrar</button>
-      </section>
-
-      <section id="detalle-proyecto3" class="detalle-proyecto" style="display:none;">
-        <div class="detalle-layout">
-          <div class="detalle-galeria">
-            <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
-            <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
-            <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
-            <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
-          </div>
-          <div class="detalle-main">
-            <img src="media/Fotos/Mis dos almas(1).png" class="detalle-img-grande" alt="principal">
-            <div class="detalle-descripcion">
-              <h2>Sencillo "Mis Dos Almas"</h2>
-              <p>Este material se trata de mi primer creación donde pongo a prueba la mezcla de mi escritura y voz con la composición
-                musical propia, inspirada por artistas como Natalia Lafourcade y la Rondalla de Saltillo. Orginalmente este sencillo de dos canciones fue concebido como parte de un plan para poder aplicar 
-                a una beca instaurada por el gobierno local donde debías demostrar tus habilidades como artista. Yo sabía que
-                me hacía falta una producción donde yo haya compuesto, a parte de la música y arreglos en general, también la letra; desde 
-                la poesía escrita hasta el arreglo de melodía y armonía de las distintas voces usadas, todas grabadas por un servidor.
-                Estos dos temas se tratan de dedicaciones hechas con mucho cariño hacia mi madre y mi abuela, a las cuales ya les 
-                quería realizar un homenaje por todo lo que para mi significan. Aproveché la oportunidad de la beca para ya no tener excusa
-                alguna y decidí lanzarme a armar este material.
-                Puedes ir escuhar el sencillo en Bandcamp y también puedes ver el video de la canción "Mi Color" en youtube.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button class="cerrar-detalle">Cerrar</button>
-      </section>
-
-      <!-- Detalle de Proyecto Secundario 1 -->
-      <section id="detalle-sec1" class="detalle-proyecto-sec" style="display:none;">
-        <div class="detalle-sec-layout">
-          <img src="media/otro1.png" class="detalle-sec-img" alt="Secundario 1">
-          <div class="detalle-sec-desc">
-            <h3>Demo "Lo-Fi Beats"</h3>
-            <p>Pequeña colección de beats experimentales para relajarse o estudiar.</p>
-          </div>
-          <button class="cerrar-detalle-sec">Cerrar</button>
-        </div>
-      </section>
-      <!-- Detalle de Proyecto Secundario 2 -->
-      <section id="detalle-sec2" class="detalle-proyecto-sec" style="display:none;">
-        <div class="detalle-sec-layout">
-          <img src="media/Apassagedoorcover.png" class="detalle-sec-img" alt="Secundario 2">
-          <div class="detalle-sec-desc">
-            <h3>Soundtrack "Pixel Quest"</h3>
-            <p>Banda sonora para videojuego indie de plataformas retro.</p>
-          </div>
-          <button class="cerrar-detalle-sec">Cerrar</button>
-        </div>
-      </section>
-      <!-- Detalle de Proyecto Secundario 3 -->
-      <section id="detalle-sec3" class="detalle-proyecto-sec" style="display:none;">
-        <div class="detalle-sec-layout">
-          <img src="media/Apassagedoorcover.png" class="detalle-sec-img" alt="Secundario 3">
-          <div class="detalle-sec-desc">
-            <h3>Demo "Cinematic Soundscapes"</h3>
-            <p>Demo de ambientes sonoros cinematográficos para cortos y trailers.</p>
-          </div>
-          <button class="cerrar-detalle-sec">Cerrar</button>
-        </div>
-      </section>
-      <!-- Detalle de Proyecto Secundario 4 -->
-      <section id="detalle-sec4" class="detalle-proyecto-sec" style="display:none;">
-        <div class="detalle-sec-layout">
-          <img src="media/Apassagedoorcover.png" class="detalle-sec-img" alt="Secundario 4">
-          <div class="detalle-sec-desc">
-            <h3>Soundtrack "Mystic Journey"</h3>
-            <p>Banda sonora para juego de aventuras y exploración mística.</p>
-          </div>
-          <button class="cerrar-detalle-sec">Cerrar</button>
-        </div>
-      </section>
-      
-
-    <section id="musica" class="content-section">
-      <div class="music-tabs">
-        <button id="btn-muestra" class="music-tab active">Música muestra</button>
-        <button id="btn-publicada" class="music-tab">Música publicada</button>
-      </div>
-      <div id="musica-muestra" class="music-subsection active">
-        <div class="music-container">
-          <h2>Música muestra</h2>
-          <div class="track-card">
-            <div class="track-image">
-              <img src="media/Fotos/Kokoro.png" alt="Carátula álbum 1" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Caja Musical2q.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Musical Box<br />
-                <strong>Producción:</strong> Animación "Kokoro"<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-      
-          <div class="track-card">
-            <div class="track-image">
-              <img src="media/Fotos/FightingFantasy.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Fighting_FantasyTheme2.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Fighting Fantasy Main Theme<br />
-                <strong>Producción:</strong> "Fighting Fantasy" Game<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="media/Fotos/animas.png" alt="Carátula álbum 3" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Pianoanimas.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Piano Melody<br />
-                <strong>Producción:</strong> "Las Ánimas" Game<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="media/Fotos/animas.png" alt="Carátula álbum 3" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Overworld.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Overworld<br />
-                <strong>Producción:</strong> "Las Ánimas" Game<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="media/Fotos/animas.png" alt="Carátula álbum 3" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Enemigo1.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Enemigo #1<br />
-                <strong>Producción:</strong> "Las Ánimas" Game<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/uaatv.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Track4.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Ambiente<br />
-                <strong>Producción:</strong> Noticiero UAA TV<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/uaatv.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Track7.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Track #7<br />
-                <strong>Producción:</strong> Noticiero UAA TV<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/switchero.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Tema _Amarillo_.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Amarillo<br />
-                <strong>Producción:</strong>"Switch hero" Game<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/switchero.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Tema _Rojo_.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Rojo<br />
-                <strong>Producción:</strong>"Switch hero" Game<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-      
-          <!-- Puedes duplicar más track-card aquí -->
-        </div>
-      </div>
-      <div id="musica-publicada" class="music-subsection">
-        <div class="music-container">
-          <h2>Música publicada</h2>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/groovesanddogscover.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Bass underwater.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Bass underwater<br />
-                <strong>Producción:</strong> Grooves And Dogs<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/groovesanddogscover.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Bono Chase.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Bono Chase<br />
-                <strong>Producción:</strong> Grooves And Dogs<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/groovesanddogscover.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Spectating .mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Spectating<br />
-                <strong>Producción:</strong> Grooves And Dogs<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/Apassagedoorcover.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/A_door_beyond_the_pillar.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> A Door Beyond The Pillar<br />
-                <strong>Producción:</strong> A Passage Door<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-          <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/Apassagedoorcover.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Cravings to the end.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Cravings To The End<br />
-                <strong>Producción:</strong> A Passage Door<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-          </div>
-
-        <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/Apassagedoorcover.png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/Forest percussions.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Forest Percussions<br />
-                <strong>Producción:</strong> A Passage Door<br />
-                <strong>Autor:</strong> Corner Creations
-              </div>
-            </div>
-        </div>
-
-        <div class="track-card">
-            <div class="track-image">
-              <img src="../Portfolio/media/Fotos/Mis dos almas(1).png" alt="Carátula álbum 2" class="caratula-modal">
-            </div>
-            <div class="track-details">
-              <audio controls>
-                <source src="media/Audios/TuColor.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <div class="track-info">
-                <strong>Nombre:</strong> Tu Color<br />
-                <strong>Producción:</strong> Mis Dos Almas<br />
-                <strong>Autor:</strong> Andy
-              </div>
-            </div>
-        </div>
-
-          
-        </div>
-      </div>
-    </section>
       
 <section id="videos" class="content-section">
   <h2>Videos</h2>
@@ -657,6 +524,140 @@
     </section>
   </main>
 
+  <!-- Modales de detalle de proyectos principales -->
+  <section id="detalle-proyecto1" class="detalle-proyecto">
+    <div class="detalle-layout">
+      <!-- Galería lateral -->
+      <div class="detalle-galeria">
+        <img src="media/Fotos/bono1.JPG" class="miniatura" alt="img1">
+        <img src="media/Fotos/bono2.JPG" class="miniatura" alt="img2">
+        <img src="media/Fotos/bono3.JPG" class="miniatura" alt="img3">
+        <img src="media/Fotos/bono4.JPG" class="miniatura" alt="img4">
+        <img src="media/Fotos/bono5.JPG" class="miniatura" alt="img5">
+        <!-- Más miniaturas -->
+      </div>
+      <!-- Detalle principal -->
+      <div class="detalle-main">
+        <img src="media/Fotos/groovesanddogscover.png" class="detalle-img-grande" alt="principal">
+        <div class="detalle-descripcion">
+          <h2>Nombre del Proyecto 1</h2>
+          <p>"Grooves and Dogs" es un EP que nació como la idea de retarme a mi mismo para componer, tocar y producir
+            enteramente un proyecto basado en el jazz y big band. Con referencias de obras como "Cowboy Beebop" de Cain Kuga,
+            "Marvel vs. Capcom 2" y viendo de cerca a leyendas del género como Jhon Coltrane y Jo Jones, este EP resultó ser toda une 
+            experiencia totalmente nueva para mi, plasmada por medio de una amalgama de sonidos y ritmos bailables, melodías intrigantes y 
+            una sensación de sentirse perseguido por agentes del departamento de policía de la ciudad de Chicago en los años 50.
+            La producción fue realizada enteramente por mi, desde la composición, arreglos, grabación y mezcla.
+            E de destacar la portada del proyecto, donde quise poner a mi leal mascota "Bono" al lado del bajo, uno de los instrumentos 
+            que más hacen acto de presencia con su color y textura en el EP. 
+            Este material ya se encuentra disponible tanto en Bandcamp como en YouTube.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="cerrar-detalle">Cerrar</button>
+  </section>
+
+  <!-- Detalle de Proyecto 2 -->
+  <section id="detalle-proyecto2" class="detalle-proyecto">
+    <div class="detalle-layout">
+      <div class="detalle-galeria">
+        <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
+        <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
+        <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
+        <img src="media/Fotos/Apassagedoorcover.png" class="miniatura" alt="img1">
+      </div>
+      <div class="detalle-main">
+        <img src="media/Fotos/Apassagedoorcover.png" class="detalle-img-grande" alt="principal">
+        <div class="detalle-descripcion">
+          <h2>EP "A Passage Door"</h2>
+          <p>"A Passage Door" se trata de la primer producción que hice de principio a fin con el objetivo de  
+            plasmar mis primeras ideas para una supuesta banda sonora de un videojuego.
+            Las melodías de este material son fuertemente inspiradas en las aventuras que uno vive con el mando en
+            la mano, donde encarnamos a un personaje que se se enfrenta a descubrimientos donde ni nosotros sabíamos
+            que queriamos descubrir. Los temas son inspirados por bandas sonoras de títulos como "The Legend of Zelda: Twilight Princess", 
+          iCO y Castlevania. El EP lo hice estando muy inspirado por géneros como el Dungeon Synth, Sand Synth y Ambient en general.
+        Como nota curiosa, este material lo compuse inspirándome en las travesías que hacía con mis amigos hacia El Cerro del Muerto, 
+      una montaña (O mejor dicho, cerro) que se encuentra en mi ciudad natal Aguascalientes, el cual tiene forma de un muerto acostado, de ahí su
+    famoso nombre.</p>
+        </div>
+      </div>
+    </div>
+    <button class="cerrar-detalle">Cerrar</button>
+  </section>
+
+  <section id="detalle-proyecto3" class="detalle-proyecto">
+    <div class="detalle-layout">
+      <div class="detalle-galeria">
+        <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
+        <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
+        <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
+        <img src="media/Fotos/Mis dos almas(1).png" class="miniatura" alt="img1">
+      </div>
+      <div class="detalle-main">
+        <img src="media/Fotos/Mis dos almas(1).png" class="detalle-img-grande" alt="principal">
+        <div class="detalle-descripcion">
+          <h2>Sencillo "Mis Dos Almas"</h2>
+          <p>Este material se trata de mi primer creación donde pongo a prueba la mezcla de mi escritura y voz con la composición
+            musical propia, inspirada por artistas como Natalia Lafourcade y la Rondalla de Saltillo. Orginalmente este sencillo de dos canciones fue concebido como parte de un plan para poder aplicar 
+            a una beca instaurada por el gobierno local donde debías demostrar tus habilidades como artista. Yo sabía que
+            me hacía falta una producción donde yo haya compuesto, a parte de la música y arreglos en general, también la letra; desde 
+            la poesía escrita hasta el arreglo de melodía y armonía de las distintas voces usadas, todas grabadas por un servidor.
+            Estos dos temas se tratan de dedicaciones hechas con mucho cariño hacia mi madre y mi abuela, a las cuales ya les 
+            quería realizar un homenaje por todo lo que para mi significan. Aproveché la oportunidad de la beca para ya no tener excusa
+            alguna y decidí lanzarme a armar este material.
+            Puedes ir escuhar el sencillo en Bandcamp y también puedes ver el video de la canción "Mi Color" en youtube.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="cerrar-detalle">Cerrar</button>
+  </section>
+
+  <!-- Detalle de Proyecto Secundario 1 -->
+  <section id="detalle-sec1" class="detalle-proyecto-sec">
+    <div class="detalle-sec-layout">
+      <img src="media/otro1.png" class="detalle-sec-img" alt="Secundario 1">
+      <div class="detalle-sec-desc">
+        <h3>Demo "Lo-Fi Beats"</h3>
+        <p>Pequeña colección de beats experimentales para relajarse o estudiar.</p>
+      </div>
+      <button class="cerrar-detalle-sec">Cerrar</button>
+    </div>
+  </section>
+  <!-- Detalle de Proyecto Secundario 2 -->
+  <section id="detalle-sec2" class="detalle-proyecto-sec">
+    <div class="detalle-sec-layout">
+      <img src="media/Apassagedoorcover.png" class="detalle-sec-img" alt="Secundario 2">
+      <div class="detalle-sec-desc">
+        <h3>Soundtrack "Pixel Quest"</h3>
+        <p>Banda sonora para videojuego indie de plataformas retro.</p>
+      </div>
+      <button class="cerrar-detalle-sec">Cerrar</button>
+    </div>
+  </section>
+  <!-- Detalle de Proyecto Secundario 3 -->
+  <section id="detalle-sec3" class="detalle-proyecto-sec">
+    <div class="detalle-sec-layout">
+      <img src="media/Apassagedoorcover.png" class="detalle-sec-img" alt="Secundario 3">
+      <div class="detalle-sec-desc">
+        <h3>Demo "Cinematic Soundscapes"</h3>
+        <p>Demo de ambientes sonoros cinematográficos para cortos y trailers.</p>
+      </div>
+      <button class="cerrar-detalle-sec">Cerrar</button>
+    </div>
+  </section>
+  <!-- Detalle de Proyecto Secundario 4 -->
+  <section id="detalle-sec4" class="detalle-proyecto-sec">
+    <div class="detalle-sec-layout">
+      <img src="media/Apassagedoorcover.png" class="detalle-sec-img" alt="Secundario 4">
+      <div class="detalle-sec-desc">
+        <h3>Soundtrack "Mystic Journey"</h3>
+        <p>Banda sonora para juego de aventuras y exploración mística.</p>
+      </div>
+      <button class="cerrar-detalle-sec">Cerrar</button>
+    </div>
+  </section>
+
   <!-- Modal global para carátulas de música -->
   <div id="modal-caratula" class="modal-caratula" style="display:none;">
     <div class="modal-caratula-bg"></div>
@@ -670,6 +671,6 @@
     <p>&copy; 2025 CornerCreations</p>
   </footer>
 
+  <script src="javascript/script.js"></script>
 </body>
-<script src="javascript/script.js"></script>
 </html>

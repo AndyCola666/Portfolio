@@ -1,5 +1,7 @@
 const links = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll(".content-section");
+const carouselInner = document.querySelector('.carousel-inner');
+const sectionIds = Array.from(document.querySelectorAll('.content-section')).map(sec => sec.id);
 
 window.addEventListener('DOMContentLoaded',()=>{
   console.log('DOM listo, script.js cargado');
@@ -23,24 +25,48 @@ window.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.proyecto-card').forEach(card => {
     card.addEventListener('click', function() {
       const id = this.getAttribute('data-proyecto');
-      // Oculta todas las secciones principales
-      document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
       // Oculta todos los detalles
-      document.querySelectorAll('.detalle-proyecto').forEach(sec => sec.style.display = 'none');
+      document.querySelectorAll('.detalle-proyecto').forEach(sec => {
+        sec.style.display = 'none';
+        sec.classList.remove('mostrando');
+      });
       // Muestra el detalle correspondiente
       const detalle = document.getElementById('detalle-' + id);
-      if(detalle) detalle.style.display = 'flex';
+      if(detalle) {
+        detalle.style.display = 'flex';
+        // Forzar reflow para que la animación se aplique correctamente
+        void detalle.offsetWidth;
+        detalle.classList.add('mostrando');
+      }
       document.body.style.overflow = 'hidden';
+
+      // Suponiendo que la sección de trabajos es la segunda (índice 1)
+      const trabajosIndex = sectionIds.indexOf('trabajos');
+
+      // Mueve el carrusel a la sección de trabajos
+      carouselInner.style.transform = `translateX(-${trabajosIndex * 100}vw)`;
+      // Opcional: actualiza clases active/inactive
+      document.querySelectorAll('.content-section').forEach((sec, idx) => {
+        if (idx === trabajosIndex) {
+          sec.classList.add('active');
+          sec.classList.remove('inactive');
+        } else {
+          sec.classList.remove('active');
+          sec.classList.add('inactive');
+        }
+      });
     });
   });
 
   // Cerrar detalle
   document.querySelectorAll('.cerrar-detalle').forEach(btn => {
     btn.addEventListener('click', function() {
-      this.closest('.detalle-proyecto').style.display = 'none';
-      // Vuelve a mostrar la sección de trabajos
-      document.getElementById('trabajos').classList.add('active');
-      document.body.style.overflow = '';
+      const modal = this.closest('.detalle-proyecto');
+      modal.classList.remove('mostrando');
+      setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }, 350); // Debe coincidir con la duración de la transición CSS
     });
   });
 
@@ -109,29 +135,43 @@ links.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
     const targetId = link.getAttribute("href").substring(1);
-    const currentSection = document.querySelector('.content-section.active');
-    const nextSection = document.getElementById(targetId);
+    const targetIndex = sectionIds.indexOf(targetId);
+    if (targetIndex === -1) return;
 
-    if (!nextSection || currentSection === nextSection) return;
+    // Mueve el carrusel
+    carouselInner.style.transform = `translateX(-${targetIndex * 100}vw)`;
 
-    // Fade out sección actual
-    currentSection.classList.remove('fade-in');
-    currentSection.classList.add('fade-out');
-
-    setTimeout(() => {
-      currentSection.classList.remove('active', 'fade-out');
-      nextSection.classList.add('active', 'fade-in');
-    }, 500); // Duración debe coincidir con el CSS
+    // Opcional: actualiza clases active/inactive para accesibilidad
+    document.querySelectorAll('.content-section').forEach((sec, idx) => {
+      if (idx === targetIndex) {
+        sec.classList.add('active');
+        sec.classList.remove('inactive');
+      } else {
+        sec.classList.remove('active');
+        sec.classList.add('inactive');
+      }
+    });
   });
 });
 
-document.getElementById("headerLogo").addEventListener("click", () => {
-    sections.forEach(section => {
-      section.classList.remove("active");
-    });
-    document.getElementById("inicio").classList.add("active");
+document.getElementById("headerLogo").addEventListener("click", function() {
+  // Lleva al inicio (primer sección)
+  const carouselInner = document.querySelector('.carousel-inner');
+  carouselInner.style.transform = `translateX(0vw)`;
+
+  // Actualiza clases active/inactive
+  document.querySelectorAll('.content-section').forEach((sec, idx) => {
+    if (idx === 0) {
+      sec.classList.add('active');
+      sec.classList.remove('inactive');
+    } else {
+      sec.classList.remove('active');
+      sec.classList.add('inactive');
+    }
   });
-    window.addEventListener('scroll', function() {
+});
+
+window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     if (window.scrollY > 80) {
       header.classList.add('shrink');
@@ -226,3 +266,26 @@ function crearModalImagen(src) {
   modal.addEventListener('click', () => modal.remove());
   document.body.appendChild(modal);
 }
+
+// Cerrar modales de trabajos al hacer clic fuera del contenido
+document.querySelectorAll('.detalle-proyecto').forEach(modal => {
+    modal.addEventListener('mousedown', function(e) {
+      const layout = modal.querySelector('.detalle-layout');
+      if (!layout.contains(e.target)) {
+        modal.classList.remove('mostrando');
+        setTimeout(() => {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        }, 350);
+      }
+    });
+  });
+  document.querySelectorAll('.detalle-proyecto-sec').forEach(modal => {
+    modal.addEventListener('mousedown', function(e) {
+      const layout = modal.querySelector('.detalle-sec-layout');
+      if (!layout.contains(e.target)) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+  });
