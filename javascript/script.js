@@ -154,6 +154,29 @@ links.forEach(link => {
   });
 });
 
+const headerLogo = document.getElementById('headerLogo');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+// Abrir/cerrar menú al hacer clic en el logo
+headerLogo.addEventListener('click', function(e) {
+  e.stopPropagation();
+  dropdownMenu.classList.toggle('open');
+});
+
+// Cerrar menú al hacer clic fuera
+document.addEventListener('click', function(e) {
+  if (dropdownMenu.classList.contains('open')) {
+    dropdownMenu.classList.remove('open');
+  }
+});
+
+// Cerrar menú al seleccionar una opción
+dropdownMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function() {
+    dropdownMenu.classList.remove('open');
+  });
+});
+
 document.getElementById("headerLogo").addEventListener("click", function() {
   // Lleva al inicio (primer sección)
   const carouselInner = document.querySelector('.carousel-inner');
