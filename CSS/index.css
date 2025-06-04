@@ -1,8 +1,8 @@
 :root {
-    --background: #121212;
-    --surface: #1f1f1f;
+    --background: #206098;
+    --surface: #182f73;
     --text: #e0e0e0;
-    --accent: #bb86fc;
+    --accent: #c88b2b;
   }
   
   * {
@@ -238,11 +238,14 @@
 .novedades-banner {
   display: flex;
   align-items: center;
-  background: rgba(30,30,30,0.95);
+  background: #207ea1;
   border-radius: 200px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  padding: 10px 300px;
-  margin-bottom: 55px;
+  padding: 8px 300px;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 10px;
   gap: 100px;
   min-height: 90px;
 }
@@ -493,20 +496,33 @@
   100% { transform: translateY(18px); }
 }
 .dropdown-menu {
-  display: none;
-  flex-direction: column;      /* Asegura disposición vertical */
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  background-color: rgba(18, 18, 18, 0.98);
+  background-color: #7fabb5;
   border-radius: 12px;
   padding: 16px;
   margin-top: 8px;
   min-width: 200px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
+  z-index: 1100;
 }
 
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Elimina el hover/focus que forzaba display:flex */
 .menu-container:hover .dropdown-menu,
 .menu-container:focus-within .dropdown-menu {
-  display: flex;
+  /* display: flex; */ /* Elimina o comenta esta línea */
 }
 .menu {
   list-style: none;
@@ -587,10 +603,14 @@
 
 .music-subsection {
   display: none;
+  margin-right: 24px;
+  margin-left: 24px;
 }
 
 .music-subsection.active {
   display: block;
+  margin-right: 24px;
+  margin-left: 24px;
 }
 
 .detalle-proyecto {
@@ -743,6 +763,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-top: 32px;
+  margin-right: 24px; 
+  margin-left: 24px;
 }
 
 .proyecto-bar {
@@ -970,6 +992,7 @@
   box-sizing: border-box;
   transition: opacity 0.5s ease;
   pointer-events: auto;
+  margin-top: 24px; /* Espacio entre el header y el contenido */
 }
 
 .detalle-proyecto,
@@ -980,4 +1003,12 @@
 .detalle-proyecto.activo,
 .detalle-proyecto-sec.activo {
   display: flex; /* O block, según tu layout */
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu-container:hover .dropdown-menu:not(.open) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 }
