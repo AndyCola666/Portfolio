@@ -30,7 +30,7 @@
   z-index: -1;
   pointer-events: none;
   opacity: 0.15; /* Ajusta la opacidad si quieres */
-  background-image: url('/media/Fotos/DEMIONCC.png');
+  background-image: url('media/Fotos/DEMIONCC.png');
   background-repeat: repeat;
   background-size: 150px 150px; /* Ajusta el tamaño del patrón */
   transform: translate(-50%, -50%) rotate(-20deg); /* Centra y rota */
