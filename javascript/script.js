@@ -3,6 +3,11 @@ const sections = document.querySelectorAll(".content-section");
 const carouselInner = document.querySelector('.carousel-inner');
 const sectionIds = Array.from(document.querySelectorAll('.content-section')).map(sec => sec.id);
 
+// Selección de elementos
+const logo = document.querySelector(".header-image");
+const menu = document.querySelector(".dropdown-menu");
+const headerLogo = document.getElementById('headerLogo');
+
 window.addEventListener('DOMContentLoaded',()=>{
   console.log('DOM listo, script.js cargado');
 
@@ -154,27 +159,41 @@ links.forEach(link => {
   });
 });
 
-const headerLogo = document.getElementById('headerLogo');
-const dropdownMenu = document.querySelector('.dropdown-menu');
+// --- Hover (abre/cierra con mouse) ---
+let menuTimeout;
 
-// Abrir/cerrar menú al hacer clic en el logo
+logo.addEventListener("mouseenter", () => {
+  clearTimeout(menuTimeout);
+  menu.classList.add("show");
+});
+
+menu.addEventListener("mouseenter", () => {
+  clearTimeout(menuTimeout);
+});
+
+logo.addEventListener("mouseleave", () => {
+  menuTimeout = setTimeout(() => {
+    menu.classList.remove("show");
+  }, 300);
+});
+
+menu.addEventListener("mouseleave", () => {
+  menuTimeout = setTimeout(() => {
+    menu.classList.remove("show");
+  }, 300);
+});
+
+// --- Click (abre/cierra con click en el logo) ---
 headerLogo.addEventListener('click', function(e) {
   e.stopPropagation();
-  dropdownMenu.classList.toggle('open');
+  menu.classList.toggle('open');
 });
 
-// Cerrar menú al hacer clic fuera
+// Cierra el menú al hacer clic fuera
 document.addEventListener('click', function(e) {
-  if (dropdownMenu.classList.contains('open')) {
-    dropdownMenu.classList.remove('open');
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
   }
-});
-
-// Cerrar menú al seleccionar una opción
-dropdownMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function() {
-    dropdownMenu.classList.remove('open');
-  });
 });
 
 document.getElementById("headerLogo").addEventListener("click", function() {
@@ -232,31 +251,7 @@ window.addEventListener('scroll', function() {
       header.classList.add('collapsed');
     }
   });
-  const logo = document.querySelector(".header-image");
-const menu = document.querySelector(".dropdown-menu");
 
-let menuTimeout;
-
-logo.addEventListener("mouseenter", () => {
-  clearTimeout(menuTimeout);
-  menu.classList.add("show");
-});
-
-menu.addEventListener("mouseenter", () => {
-  clearTimeout(menuTimeout);
-});
-
-logo.addEventListener("mouseleave", () => {
-  menuTimeout = setTimeout(() => {
-    menu.classList.remove("show");
-  }, 300);
-});
-
-menu.addEventListener("mouseleave", () => {
-  menuTimeout = setTimeout(() => {
-    menu.classList.remove("show");
-  }, 300);
-});
 
 // Ampliar imagen de galería en modal flotante (usado para galería de inicio y carátulas de música)
 function crearModalImagen(src) {
