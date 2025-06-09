@@ -19,10 +19,33 @@
   overflow-x: hidden;
 }
   
+
+  
+  body::before {
+  content: "";
+  position: fixed;
+  top: 50%; left: 50%;
+  width: 200vw;
+  height: 200vh;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.15; /* Ajusta la opacidad si quieres */
+  background-image: url('/media/Fotos/DEMIONCC.png');
+  background-repeat: repeat;
+  background-size: 150px 150px; /* Ajusta el tamaño del patrón */
+  transform: translate(-50%, -50%) rotate(-20deg); /* Centra y rota */
+}
+
+  
   body {
+      position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* Fondo de color base si quieres */
+  background: var(--color-fondo, #18181b);
+  z-index: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background);
     color: var(--text);
     font-family: Arial, sans-serif;
@@ -57,6 +80,7 @@
     cursor: pointer;
     animation: floatLogo 2.5s ease-in-out infinite alternate;
     z-index: 1001;
+    position: relative;
   }
   
   #headerLogo {
@@ -511,9 +535,14 @@
   pointer-events: none;
   transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
   z-index: 1100;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
 }
 
-.dropdown-menu.open {
+.dropdown-menu.open,
+.dropdown-menu.show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -1006,9 +1035,120 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .menu-container:hover .dropdown-menu:not(.open) {
+  .header-image:hover .dropdown-menu:not(.open) {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+  }
+}
+
+.header-image:hover .dropdown-menu,
+.header-image:focus-within .dropdown-menu,
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Trust Carousel (Carrusel de confianza) */
+.trust-carousel-container {
+  width: 100%;
+  overflow: visible;
+  margin: 3.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trust-carousel-label {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--accent, #c88b2b);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+.trust-carousel {
+  width: 90vw;
+  max-width: 1400px;
+  min-height: 120px;
+  overflow: hidden;
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.trust-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  animation: trust-scroll 18s linear infinite;
+  will-change: transform;
+}
+.trust-carousel-track img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0.2) brightness(0.95) drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+  opacity: 0.85;
+  transition: filter 0.2s, opacity 0.2s, transform 0.2s;
+  margin: 0 0.5rem;
+  /* Fade effect */
+  position: relative;
+  z-index: 1;
+}
+.trust-carousel-track img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.12) rotate(-2deg);
+  z-index: 2;
+}
+.trust-carousel::after, .trust-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.trust-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background, #206098) 60%, transparent 100%);
+}
+.trust-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background, #206098) 60%, transparent 100%);
+}
+@keyframes trust-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 1100px) {
+  .trust-carousel-track img {
+    height: 64px;
+  }
+  .trust-carousel::before, .trust-carousel::after {
+    width: 60px;
+  }
+}
+@media (max-width: 700px) {
+  .trust-carousel-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .trust-carousel {
+    min-height: 60px;
+    max-width: 98vw;
+  }
+  .trust-carousel-track img {
+    height: 36px;
+    gap: 1.2rem;
+  }
+  .trust-carousel::before, .trust-carousel::after {
+    width: 30px;
   }
 }
