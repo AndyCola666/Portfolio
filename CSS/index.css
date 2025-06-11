@@ -280,7 +280,15 @@
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  animation: floatimg 2s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
 }
+
+@keyframes floatimg {
+  0% { transform: translateY(10px); } 
+  100% { transform: translateY(-8px); }
+}
+   
 
 .novedades-info {
   flex: 1;
@@ -795,6 +803,12 @@ background: linear-gradient(to right, #182f73, #206098);
   margin-top: 32px;
   margin-right: 24px; 
   margin-left: 24px;
+}
+@media (max-width: 600px) {
+  .proyectos-secundarios-grid {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    gap: 12px;
+  }
 }
 
 .proyecto-bar {
