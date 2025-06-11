@@ -39,11 +39,9 @@
   
   body {
       position: relative;
-  min-height: 100vh;
   /* Fondo de color base si quieres */
   background: var(--color-fondo, #18181b);
   z-index: 0;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: var(--background);
@@ -211,7 +209,6 @@
   main {
     flex: 1 0 auto;
     margin-top: 0;
-    min-height: 400px;
     position: relative;
   }
   
@@ -236,7 +233,6 @@
   .content-section {
     width: 100vw;
     min-width: 100vw;
-    min-height: 100vh;
     flex-shrink: 0;
     box-sizing: border-box;
     transition: opacity 0.5s ease;
@@ -258,7 +254,11 @@
     background-color: var(--surface);
     padding: 10px;
     margin-top: 40px;
-  }
+    text-align: center;
+    padding: 16px 0;
+    background: #182f73;
+    color: #fff;
+}
 .novedades-banner {
   display: flex;
   align-items: center;
@@ -1004,7 +1004,6 @@ background: linear-gradient(to right, #182f73, #206098);
 .carousel-container {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -1012,13 +1011,11 @@ background: linear-gradient(to right, #182f73, #206098);
   display: flex;
   transition: transform 0.6s cubic-bezier(.77,0,.18,1);
   will-change: transform;
-  min-height: 100vh;
 }
 
 .content-section {
   width: 100vw;
   min-width: 100vw;
-  min-height: 100vh;
   flex-shrink: 0;
   box-sizing: border-box;
   transition: opacity 0.5s ease;
@@ -1154,3 +1151,9 @@ background: linear-gradient(to right, #182f73, #206098);
     width: 30px;
   }
 }
+  .carousel-container,
+  .carousel-inner,
+  .content-section {
+    min-height: unset !important;
+    height: auto !important;
+  }
