@@ -171,10 +171,12 @@
     filter: brightness(0.9);
     transition: filter 0.3s;
     border-radius: 6px;
+    transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), filter 0.2s;
   }
   
   .social img:hover {
-    filter: brightness(1.5);
+  transform: scale(1.18) rotate(-10deg);
+  filter: brightness(1.2) drop-shadow(0 2px 8px #b48be4aa);
   }
   
   @media (max-width: 768px) {
@@ -1171,3 +1173,42 @@ background: linear-gradient(to right, #182f73, #206098);
     min-height: unset !important;
     height: auto !important;
   }
+/* Imagen animada detrás del footer solo en móviles */
+.footer-bg-anim {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .footer-bg-anim {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 100vw;
+    height: 120px; /* Ajusta según el tamaño de tu imagen */
+    margin-bottom: -40px; /* Opcional: para que se solape con el footer */
+    z-index: 0;
+    overflow: visible;
+  }
+  .footer-bg-anim img {
+    height: 100px; /* Ajusta según tu imagen */
+    animation: floatFooter 2.5s infinite alternate;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.85;
+  }
+  footer {
+    position: relative;
+    z-index: 1;
+    background: #182f73;
+  }
+}
+
+@keyframes floatFooter {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-18px); }
+}
